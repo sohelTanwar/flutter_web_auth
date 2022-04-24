@@ -11,7 +11,7 @@ class CallbackActivity: Activity() {
     val url = intent?.data
     val scheme = url?.scheme
 
-    if (true) {
+    if (scheme != null) {
       FlutterWebAuthPlugin.callbacks.remove(scheme)?.success(url.toString())
     }
 
